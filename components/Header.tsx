@@ -23,7 +23,6 @@ const Header = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // Sinhroniziraj timedCart z globalnim cart
   useEffect(() => {
     const now = Date.now();
     const updatedCart: TimedProduct[] = cart.map((item) => {
@@ -33,7 +32,6 @@ const Header = () => {
     setTimedCart(updatedCart);
   }, [cart]);
 
-  // Timer za odstranjevanje izdelkov po 10 minutah
   useEffect(() => {
     const interval = setInterval(() => {
       const now = Date.now();
@@ -151,7 +149,7 @@ const Header = () => {
               )}
             </div>
 
-            {/* LOGIN / REGISTER ali PROFIL */}
+            
             {!user ? (
               <div className="flex items-center gap-4">
                 <button className="text-sm font-semibold hover:text-blue-600" onClick={() => setShowLogin(true)}>Login</button>
@@ -178,13 +176,13 @@ const Header = () => {
             )}
           </div>
 
-          {/* MOBILE MENU BUTTON */}
+          
           <button className="md:hidden text-2xl" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? "✕" : "☰"}
           </button>
         </div>
 
-        {/* MOBILE MENU */}
+        
         {menuOpen && (
           <div className="md:hidden py-4 border-t flex flex-col gap-4 bg-gray-50 px-2 rounded-b">
             <button className="flex items-center justify-between text-sm font-medium" onClick={() => setCartOpen(!cartOpen)}>
@@ -205,7 +203,7 @@ const Header = () => {
         )}
       </Container>
 
-      {/* MODALS (Login & Register) */}
+      
       {(showLogin || showRegister) && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-[100] backdrop-blur-sm p-4">
           <div className="bg-white p-6 rounded-xl w-full max-w-sm shadow-2xl">
