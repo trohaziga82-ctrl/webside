@@ -21,19 +21,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="font-poppins antialiased min-h-screen flex flex-col">
-        {/* Ovijemo celotno aplikacijo v Providerje za košarico in uporabnika */}
+        
         <CartProvider>
           <UserProvider>
             
-            {/* GLAVNI HEADER (Logo, Košarica, Profil) */}
+            
             <Header />
 
-            {/* GLAVNA VSEBINA - Tukaj se izrisujejo tvoji izdelki */}
+           
             <main className="flex-1">
               {children}
             </main>
 
-            {/* NOGA STRANI */}
+            
             <Footer />
             
           </UserProvider>
