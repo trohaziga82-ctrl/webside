@@ -97,9 +97,9 @@ const Header = () => {
         <div className="flex items-center justify-between py-4">
           <Logo />
 
-          {/* DESKTOP MENU */}
+          
           <div className="hidden md:flex items-center gap-6">
-            {/* KOŠARICA */}
+            
             <div className="relative">
               <button className="relative text-xl" onClick={() => setCartOpen(!cartOpen)}>
                 🛒
